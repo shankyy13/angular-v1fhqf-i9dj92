@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 16px 16px;
+}
+
+input {
+  margin: 8px 0;
+}
+
+button + button {
+  margin-left: 8px;
+}
+.a{
+border: 2px solid blue;
+padding: 5px;
+border-radius: 10%;
+width: 30%;
+height: 20%;
+}
+.b{
+  border: 10px solid ;
+
+  max-width: 50%;
+  max-height: 50%;
+  }
+  .btn {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: red;
+  }
+  

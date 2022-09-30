@@ -1,0 +1,35 @@
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div >
+<form  novalidate #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+<div class="row">
+  <div class="col-sm-6 form-group">
+    <label ><b>Comment</b></label>
+    <br>
+    <textarea  rows="4" cols="50" class="form-control" name="Comment" ngModel #commentRef="ngModel" required [class.ctrl-error] = "commentRef.touched &&
+    commentRef?.errors?.required" minlength="3"> 
+    </textarea>
+    <div *ngIf="commentRef.touched &&
+    commentRef?.errors?.required" class="error-message">
+The comment is required.
+</div>
+</div>
+
+</div>
+</form>
+
+
+<div *ngIf="isCancelClicked">
+<img class='a' src="{{data.img}}" />
+<button class="btn" (click)="onCancel(false)" ><i class="fa fa-close"></i></button>
+</div >
+  <br><br>
+<div>
+  <button (click)="dialogRef.close()">OK</button>
+  <button (click)="dialogRef.close()">Cancel</button>
+</div>
+</div>
+
